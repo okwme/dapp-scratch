@@ -20,11 +20,14 @@ commander
         // console.log('abi', commander.abi)
         dappScratch.createDummyContract()
         .then(() => {
-          console.log('Created Contract'.green)
+          console.log('Created Contract 🎉'.green)
         })
         .then(dappScratch.createWrapper())
+        .then(() => {
+          console.log('Created Wrapper 🍾'.green)
+        })
         .catch((error) => {
-          console.log('FAIL'.red)
+          console.log('FAILED'.red)
           console.error(error)
         })
     })
