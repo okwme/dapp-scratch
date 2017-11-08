@@ -79,10 +79,10 @@ contract Sample {
     return __string;
   }
   event BoolEventReturnsString(string __string);
-  function boolUintFunctionReturnsBoolUint (bool _bool) public pure returns(bool __bool, uint _uint_){
+  function boolBytes1FunctionReturnsBoolBytes1 (bool _bool) public pure returns(bool __bool, bytes1 _bytes1_){
     bool ___bool;
-    uint ___uint;
-    return (___bool, ___uint);
+    bytes1 ___bytes1;
+    return (___bool, ___bytes1);
   }
   function intFunctionReturnsBool (int _int) public pure returns(bool __bool){
     bool ___bool;
@@ -149,10 +149,10 @@ contract Sample {
     return __string;
   }
   event IntEventReturnsString(string __string);
-  function intBytes32FunctionReturnsIntBytes32 (int _int) public pure returns(int __int, bytes32 _bytes32_){
+  function intBytes1FunctionReturnsIntBytes1 (int _int) public pure returns(int __int, bytes1 _bytes1_){
     int ___int;
-    bytes32 ___bytes32;
-    return (___int, ___bytes32);
+    bytes1 ___bytes1;
+    return (___int, ___bytes1);
   }
   function int8FunctionReturnsBool (int8 _int8) public pure returns(bool __bool){
     bool ___bool;
@@ -219,10 +219,10 @@ contract Sample {
     return __string;
   }
   event Int8EventReturnsString(string __string);
-  function int8IntFunctionReturnsInt8Int (int8 _int8) public pure returns(int8 __int8, int _int_){
+  function int8Bytes1FunctionReturnsInt8Bytes1 (int8 _int8) public pure returns(int8 __int8, bytes1 _bytes1_){
     int8 ___int8;
-    int ___int;
-    return (___int8, ___int);
+    bytes1 ___bytes1;
+    return (___int8, ___bytes1);
   }
   function int256FunctionReturnsBool (int256 _int256) public pure returns(bool __bool){
     bool ___bool;
@@ -289,10 +289,10 @@ contract Sample {
     return __string;
   }
   event Int256EventReturnsString(string __string);
-  function int256Int8FunctionReturnsInt256Int8 (int256 _int256) public pure returns(int256 __int256, int8 _int8_){
+  function int256Bytes1FunctionReturnsInt256Bytes1 (int256 _int256) public pure returns(int256 __int256, bytes1 _bytes1_){
     int256 ___int256;
-    int8 ___int8;
-    return (___int256, ___int8);
+    bytes1 ___bytes1;
+    return (___int256, ___bytes1);
   }
   function uintFunctionReturnsBool (uint _uint) public pure returns(bool __bool){
     bool ___bool;
@@ -359,10 +359,10 @@ contract Sample {
     return __string;
   }
   event UintEventReturnsString(string __string);
-  function uintBytes1FunctionReturnsUintBytes1 (uint _uint) public pure returns(uint __uint, bytes1 _bytes1_){
+  function uintInt256FunctionReturnsUintInt256 (uint _uint) public pure returns(uint __uint, int256 _int256_){
     uint ___uint;
-    bytes1 ___bytes1;
-    return (___uint, ___bytes1);
+    int256 ___int256;
+    return (___uint, ___int256);
   }
   function uint8FunctionReturnsBool (uint8 _uint8) public pure returns(bool __bool){
     bool ___bool;
@@ -429,10 +429,10 @@ contract Sample {
     return __string;
   }
   event Uint8EventReturnsString(string __string);
-  function uint8Int8FunctionReturnsUint8Int8 (uint8 _uint8) public pure returns(uint8 __uint8, int8 _int8_){
+  function uint8Uint256FunctionReturnsUint8Uint256 (uint8 _uint8) public pure returns(uint8 __uint8, uint256 _uint256_){
     uint8 ___uint8;
-    int8 ___int8;
-    return (___uint8, ___int8);
+    uint256 ___uint256;
+    return (___uint8, ___uint256);
   }
   function uint256FunctionReturnsBool (uint256 _uint256) public pure returns(bool __bool){
     bool ___bool;
@@ -499,10 +499,10 @@ contract Sample {
     return __string;
   }
   event Uint256EventReturnsString(string __string);
-  function uint256AddressFunctionReturnsUint256Address (uint256 _uint256) public pure returns(uint256 __uint256, address _address_){
+  function uint256Bytes1FunctionReturnsUint256Bytes1 (uint256 _uint256) public pure returns(uint256 __uint256, bytes1 _bytes1_){
     uint256 ___uint256;
-    address ___address;
-    return (___uint256, ___address);
+    bytes1 ___bytes1;
+    return (___uint256, ___bytes1);
   }
   function addressFunctionReturnsBool (address _address) public pure returns(bool __bool){
     bool ___bool;
@@ -569,10 +569,10 @@ contract Sample {
     return __string;
   }
   event AddressEventReturnsString(string __string);
-  function addressUint256FunctionReturnsAddressUint256 (address _address) public pure returns(address __address, uint256 _uint256_){
+  function addressInt256FunctionReturnsAddressInt256 (address _address) public pure returns(address __address, int256 _int256_){
     address ___address;
-    uint256 ___uint256;
-    return (___address, ___uint256);
+    int256 ___int256;
+    return (___address, ___int256);
   }
   function byteFunctionReturnsBool (byte _byte) public pure returns(bool __bool){
     bool ___bool;
@@ -639,10 +639,10 @@ contract Sample {
     return __string;
   }
   event ByteEventReturnsString(string __string);
-  function byteStringFunctionReturnsByteString (byte _byte) public pure returns(byte __byte, string _string_){
+  function byteUintFunctionReturnsByteUint (byte _byte) public pure returns(byte __byte, uint _uint_){
     byte ___byte;
-    string ___string;
-    return (___byte, ___string);
+    uint ___uint;
+    return (___byte, ___uint);
   }
   function bytes1FunctionReturnsBool (bytes1 _bytes1) public pure returns(bool __bool){
     bool ___bool;
@@ -709,10 +709,10 @@ contract Sample {
     return __string;
   }
   event Bytes1EventReturnsString(string __string);
-  function bytes1Uint256FunctionReturnsBytes1Uint256 (bytes1 _bytes1) public pure returns(bytes1 __bytes1, uint256 _uint256_){
+  function bytes1StringFunctionReturnsBytes1String (bytes1 _bytes1) public pure returns(bytes1 __bytes1, string _string_){
     bytes1 ___bytes1;
-    uint256 ___uint256;
-    return (___bytes1, ___uint256);
+    string ___string;
+    return (___bytes1, ___string);
   }
   function bytes32FunctionReturnsBool (bytes32 _bytes32) public pure returns(bool __bool){
     bool ___bool;
@@ -779,10 +779,10 @@ contract Sample {
     return __string;
   }
   event Bytes32EventReturnsString(string __string);
-  function bytes32AddressFunctionReturnsBytes32Address (bytes32 _bytes32) public pure returns(bytes32 __bytes32, address _address_){
+  function bytes32Uint8FunctionReturnsBytes32Uint8 (bytes32 _bytes32) public pure returns(bytes32 __bytes32, uint8 _uint8_){
     bytes32 ___bytes32;
-    address ___address;
-    return (___bytes32, ___address);
+    uint8 ___uint8;
+    return (___bytes32, ___uint8);
   }
   function bytesFunctionReturnsBool (bytes _bytes) public pure returns(bool __bool){
     bool ___bool;
@@ -849,10 +849,10 @@ contract Sample {
     return __string;
   }
   event BytesEventReturnsString(string __string);
-  function bytesAddressFunctionReturnsBytesAddress (bytes _bytes) public pure returns(bytes __bytes, address _address_){
+  function bytesStringFunctionReturnsBytesString (bytes _bytes) public pure returns(bytes __bytes, string _string_){
     bytes ___bytes;
-    address ___address;
-    return (___bytes, ___address);
+    string ___string;
+    return (___bytes, ___string);
   }
   function stringFunctionReturnsBool (string _string) public pure returns(bool __bool){
     bool ___bool;
@@ -919,10 +919,10 @@ contract Sample {
     return __string;
   }
   event StringEventReturnsString(string __string);
-  function stringByteFunctionReturnsStringByte (string _string) public pure returns(string __string, byte _byte_){
+  function stringBytesFunctionReturnsStringBytes (string _string) public pure returns(string __string, bytes _bytes_){
     string ___string;
-    byte ___byte;
-    return (___string, ___byte);
+    bytes ___bytes;
+    return (___string, ___bytes);
   }
 
 }
