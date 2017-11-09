@@ -1,7 +1,7 @@
 
 
 var assert = require('assert');
-import Sample from '../assets/sample'
+import Sample from '../contracts/SampleContract'
 var ZeroClientProvider = require('web3-provider-engine/zero.js')
 const account = '0x5899c1651653E1e4A110Cd45C7f4E9F576dE0670'
 let currentProvider = ZeroClientProvider({
