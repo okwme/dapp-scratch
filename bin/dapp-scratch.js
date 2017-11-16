@@ -90,7 +90,7 @@ function promptInstall (index = 0, dependencies = []) {
         if (index >= dependencies.length) resolve()
         let dep = dependencies[index]
         if (shell.exec('npm list |  grep ' + dep, {silent:true}).stdout.length) {
-            console.log(colors.green(dep + ' detected'))
+            console.log(colors.green(dep + ' installed'))
             promptInstall(index + 1, dependencies).then(resolve).catch(reject)
         }else {
             inquirer.prompt({
