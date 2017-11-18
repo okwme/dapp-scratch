@@ -2,7 +2,7 @@
 A command line interface for generating a Javascript module for interacting with a Solidity contract.
 
 ## Tutorial
-(Dapp Scratch: a CLI for Building Dapps (and tutorial for building your first one))[https://medium.com/@billyrennekamp/dapp-scratch-a-cli-for-building-dapps-and-tutorial-for-building-your-first-one-5cabdff3771e]
+[Dapp Scratch: a CLI for Building Dapps (and tutorial for building your first one)](https://medium.com/@billyrennekamp/dapp-scratch-a-cli-for-building-dapps-and-tutorial-for-building-your-first-one-5cabdff3771e)
 
 ## install
 ```
@@ -30,11 +30,32 @@ build         Build a dummy solidity contract for testing
 
 ```
 
-## build
+## results
+```
+$ dapp-scratch ContractName
+ABI found at ./build/contracts/ContractName.json
+bignumber.js installed
+web3 installed
+web3-provider-engine installed
+@aeternity/id-manager-provider@0.0.5 installed
+Wrapper Created at ./dapp-scratch-wrapper/ContractName/index.js
+/*
+ * To use ContractName just import it into your project:
+ */
+import ContractName from './dapp-scratch-wrapper/ContractName'
+let contractName = new ContractName()
+ContractName.helloWorld()
+/*
+ * Have Fun : )
+ */
+```
+
+## develop
 ```
 git clone git@github.com/okwme/dapp-scratch
 cd dapp-scratch
 npm install
+npm run dev
 ```
 
 ## test
@@ -42,7 +63,8 @@ npm install
 npm run test
 ```
 
-## dev
-```
-npm run dev
-```
+## TODO
+* add event listening
+* generate ABI from .sol when no is ABI present
+* reduce dependencies
+* rebuild tests
