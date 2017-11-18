@@ -1,11 +1,40 @@
+# Dapp Scratch
+A command line interface for generating a Javascript module for interacting with a Solidity contract.
+
+## Tutorial
+(Dapp Scratch: a CLI for Building Dapps (and tutorial for building your first one))[https://medium.com/@billyrennekamp/dapp-scratch-a-cli-for-building-dapps-and-tutorial-for-building-your-first-one-5cabdff3771e]
+
 ## install
 ```
-npm install
+npm install okwme/dapp-scratch -g
+```
+## run
+```
+$ dapp-scratch <ContractName>
+$ dapp-scratch <ContractName> --address 0x1234567890123456789012345678901234567890
+$ dapp-scratch <ContractName> --ABI './build/contracts/ContractName.json'
+$ dapp-scratch <ContractName> --contract './contracts/ContractName.sol'
+$ dapp-scratch build
+$ dapp-scratch -h
+
+Usage: dapp-scratch [options] [command]
+Options:
+-V, --version   output the version number
+    -a, --address   Address
+    -b, --abi       ABI
+    -c, --contract  Contract
+    -h, --help      output usage information
+Commands:
+* <filename>  Build Wrapper from Contract
+build         Build a dummy solidity contract for testing
+
 ```
 
 ## build
 ```
-node ./bin/dapp-scratch.js run
+git clone git@github.com/okwme/dapp-scratch
+cd dapp-scratch
+npm install
 ```
 
 ## test
