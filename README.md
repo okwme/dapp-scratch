@@ -62,3 +62,9 @@ npm run dev
 ```
 npm run test
 ```
+
+## TODO
+* add event listening
+* generate ABI from .sol when no is ABI present
+* reduce dependencies
+* rebuild tests
