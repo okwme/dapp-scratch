@@ -62,7 +62,7 @@ function getABI (path) {
 
 function installDependencies () {
     return new Promise((resolve, reject) => {
-        let dependencies = ['web3', 'web3-provider-engine', '@aeternity/id-manager-provider@0.0.5']
+        let dependencies = ['web3', 'web3-provider-engine', 'aeternity/id-manager-provider']
         let depIndex = 0
         let package = shell.exec('ls package.json', {silent: true})
         if (package.stderr) {
