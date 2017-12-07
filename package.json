@@ -14,9 +14,8 @@
     "inquirer": "^4.0.0",
     "shelljs": "^0.7.8"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "scripts": {
-
+    "dev": "node bin/dapp-scratch.js"
   }
 }
