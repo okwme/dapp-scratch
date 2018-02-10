@@ -124,7 +124,7 @@ commander
  * To use ${dappScratch.projectName} just import it into your project:
  */
 
-import ${dappScratch.projectName} from '${dappScratch.path}'
+const ${dappScratch.projectName} = require('${dappScratch.path}')
 let ${dappScratch.projectNameSmall} = new ${dappScratch.projectName}()
 ${dappScratch.projectNameSmall}.helloWorld()
 

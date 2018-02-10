@@ -15,7 +15,7 @@ class SampleContract {
     this.unlocked = false
     this.balanceWei = 0
     this.balance = 0
-    this.address = '0xASDF'
+    this.address = ''REPLACE_WITH_CONTRACT_ADDRESS''
     this.genesisBlock = 0
     this.loading = false
     this.options = {
