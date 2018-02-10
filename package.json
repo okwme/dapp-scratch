@@ -1,6 +1,6 @@
 {
   "name": "dapp-scratch",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./lib/dapp-scratch.js",
   "bin": {
     "dapp-scratch": "bin/dapp-scratch.js"
@@ -15,9 +15,9 @@
     "shelljs": "^0.7.8"
   },
   "devDependencies": {},
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/okwme/dapp-scratch.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/okwme/dapp-scratch.git"
   },
   "scripts": {}
 }
