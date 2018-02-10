@@ -14,9 +14,6 @@
     "inquirer": "^4.0.0",
     "shelljs": "^0.7.8"
   },
-  "devDependencies": {
-  },
-  "scripts": {
-
-  }
+  "devDependencies": {},
+  "scripts": {}
 }

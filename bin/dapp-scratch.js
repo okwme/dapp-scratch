@@ -10,9 +10,10 @@ const child_process = require('child_process');
 
 commander
     .version('0.0.1')
-    .option('-a, --address', 'Address')
-    .option('-b, --abi', 'ABI')
-    .option('-c, --contract', 'Contract')
+    .usage('wrap [options]')
+    .option('-a, --address [address]', 'Address')
+    .option('-b, --abi [abi]', 'ABI')
+    .option('-c, --contract [contract]', 'Contract')
 
 
 commander
@@ -62,7 +63,7 @@ function getABI (path) {
 
 function installDependencies () {
     return new Promise((resolve, reject) => {
-        let dependencies = ['web3', 'web3-provider-engine', 'aeternity/id-manager-provider']
+        let dependencies = ['web3', 'web3-provider-engine']
         let depIndex = 0
         let package = shell.exec('ls package.json', {silent: true})
         if (package.stderr) {
@@ -89,7 +90,7 @@ function promptInstall (index = 0, dependencies = []) {
     return new Promise((resolve, reject) => {
         if (index >= dependencies.length) resolve()
         let dep = dependencies[index]
-        if (shell.exec('npm list |  grep ' + dep, {silent:true}).stdout.length) {
+        if (shell.exec('npm list --depth=0 | grep ' + dep + '@', {silent:true}).stdout.length) {
             console.log(colors.green(dep + ' installed'))
             promptInstall(index + 1, dependencies).then(resolve).catch(reject)
         }else {
@@ -110,16 +111,20 @@ function promptInstall (index = 0, dependencies = []) {
     })
 }
 commander
-    .command('* <filename>')
+    .command('wrap filename')
     .description('Build Wrapper from Contract')
-    .action((filename) => {
+    .action((filename, comm) => {
+        if (!comm) {
+            comm = filename
+            filename = null
+        }
         var dappScratch = null
-        if (commander.contract) {
-            contractPath = getContract(filename)
+        if (commander.contract || filename) {
+            contractPath = getContract(commander.contract || filename)
             console.log(colors.green('Contract found at ' + contractPath));
             dappScratch = new DappScratch({contractPath})
         } else {
-            abiPath = getABI(filename)
+            abiPath = getABI(commander.abi || filename)
             console.log(colors.green('ABI found at ' + abiPath));
             dappScratch = new DappScratch({abiPath})
         }
