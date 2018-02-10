@@ -1,9 +1,9 @@
 
-import SampleContractArtifacts from '../../build/contracts/SampleContract.json'
+const SampleContractArtifacts = require('../../build/contracts/SampleContract.json')
 
-import Web3 from 'web3'
+const Web3 = require('web3')
 const BN = Web3.utils.BN
-import ZeroClientProvider from 'web3-provider-engine/zero.js'
+const ZeroClientProvider = require('web3-provider-engine/zero.js')
 
 class SampleContract {
   constructor (options) {
@@ -2023,4 +2023,4 @@ class SampleContract {
 
 }
 
-export default SampleContract
+module.exports = SampleContract

@@ -10,41 +10,51 @@ npm install okwme/dapp-scratch -g
 ```
 ## run
 ```
-$ dapp-scratch <ContractName>
-$ dapp-scratch <ContractName> --address 0x1234567890123456789012345678901234567890
-$ dapp-scratch <ContractName> --ABI './build/contracts/ContractName.json'
-$ dapp-scratch <ContractName> --contract './contracts/ContractName.sol'
-$ dapp-scratch build
+$ dapp-scratch build <ContractName>
+$ dapp-scratch build <ContractName> --address 0x1234567890123456789012345678901234567890
+$ dapp-scratch build <ContractName> --ABI './build/contracts/ContractName.json'
+$ dapp-scratch build <ContractName> --contract './contracts/ContractName.sol'
+$ dapp-scratch test
 $ dapp-scratch -h
 
-Usage: dapp-scratch [options] [command]
-Options:
--V, --version   output the version number
-    -a, --address   Address
-    -b, --abi       ABI
-    -c, --contract  Contract
-    -h, --help      output usage information
-Commands:
-* <filename>  Build Wrapper from Contract
-build         Build a dummy solidity contract for testing
+  Usage: dapp-scratch build [options]
+
+
+  Options:
+
+    -V, --version              output the version number
+    -c, --contract [contract]  Contract name or location
+                                 ie: SampleContract or SampleContract.sol or ./contracts/SampleContract.sol
+    -b, --abi [abi]            ABI name or location
+                                 ie: SampleContract or SampleContract.json or ./build/contracts/SampleContract.json
+    -a, --address [address]    Address of deployed contract
+    -h, --help                 output usage information
+
+
+  Commands:
+
+    build   Build a module from Contract or ABI
+    test    Generate a contract for testing
+
 
 ```
 
 ## results
 ```
-$ dapp-scratch ContractName
-ABI found at ./build/contracts/ContractName.json
-bignumber.js installed
+$ dapp-scratch build SampleContract
+Contract found at ./contracts/SampleContract.sol
 web3 installed
 web3-provider-engine installed
-@aeternity/id-manager-provider@0.0.5 installed
-Wrapper Created at ./dapp-scratch-wrapper/ContractName/index.js
+Module created at ./dapp-module/SampleContract/index.js
+
 /*
- * To use ContractName just import it into your project:
+ * To use SampleContract just import it into your project:
  */
-import ContractName from './dapp-scratch-wrapper/ContractName'
-let contractName = new ContractName()
-ContractName.helloWorld()
+
+const SampleContract = require('./dapp-module/SampleContract/index.js')
+let sampleContract = new SampleContract()
+sampleContract.helloWorld()
+
 /*
  * Have Fun : )
  */
@@ -62,9 +72,3 @@ npm run dev
 ```
 npm run test
 ```
-
-## TODO
-* add event listening
-* generate ABI from .sol when no is ABI present
-* reduce dependencies
-* rebuild tests
