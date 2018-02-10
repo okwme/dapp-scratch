@@ -51,8 +51,8 @@ function installDependencies () {
     return new Promise((resolve, reject) => {
         let dependencies = ['web3', 'web3-provider-engine']
         let depIndex = 0
-        let package = shell.exec('ls package.json', {silent: true})
-        if (package.stderr) {
+        let pkg = shell.exec('ls package.json', {silent: true})
+        if (pkg.stderr) {
             inquirer.prompt({
                 type: 'confirm',
                 name: 'npminit',
