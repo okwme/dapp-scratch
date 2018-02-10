@@ -79,7 +79,7 @@ contract SampleContract {
     return __string;
   }
   event BoolEventReturnsString(string __string);
-  function boolUint256FunctionReturnsBoolUint256 (bool _bool) public constant returns(bool __bool, uint256 _uint256_){
+  function boolUint256FunctionReturnsBoolUint256 (bool _bool, uint256 __uint256) public constant returns(bool __bool, uint256 _uint256_){
     bool ___bool;
     uint256 ___uint256;
     return (___bool, ___uint256);
@@ -149,7 +149,7 @@ contract SampleContract {
     return __string;
   }
   event IntEventReturnsString(string __string);
-  function intBytes32FunctionReturnsIntBytes32 (int _int) public constant returns(int __int, bytes32 _bytes32_){
+  function intBytes32FunctionReturnsIntBytes32 (int _int, bytes32 __bytes32) public constant returns(int __int, bytes32 _bytes32_){
     int ___int;
     bytes32 ___bytes32;
     return (___int, ___bytes32);
@@ -219,10 +219,10 @@ contract SampleContract {
     return __string;
   }
   event Int8EventReturnsString(string __string);
-  function int8AddressFunctionReturnsInt8Address (int8 _int8) public constant returns(int8 __int8, address _address_){
+  function int8Bytes32FunctionReturnsInt8Bytes32 (int8 _int8, bytes32 __bytes32) public constant returns(int8 __int8, bytes32 _bytes32_){
     int8 ___int8;
-    address ___address;
-    return (___int8, ___address);
+    bytes32 ___bytes32;
+    return (___int8, ___bytes32);
   }
   function int256FunctionReturnsBool (int256 _int256) public constant returns(bool __bool){
     bool ___bool;
@@ -289,10 +289,10 @@ contract SampleContract {
     return __string;
   }
   event Int256EventReturnsString(string __string);
-  function int256BytesFunctionReturnsInt256Bytes (int256 _int256) public constant returns(int256 __int256, bytes _bytes_){
+  function int256Uint8FunctionReturnsInt256Uint8 (int256 _int256, uint8 __uint8) public constant returns(int256 __int256, uint8 _uint8_){
     int256 ___int256;
-    bytes ___bytes;
-    return (___int256, ___bytes);
+    uint8 ___uint8;
+    return (___int256, ___uint8);
   }
   function uintFunctionReturnsBool (uint _uint) public constant returns(bool __bool){
     bool ___bool;
@@ -359,10 +359,10 @@ contract SampleContract {
     return __string;
   }
   event UintEventReturnsString(string __string);
-  function uintUint8FunctionReturnsUintUint8 (uint _uint) public constant returns(uint __uint, uint8 _uint8_){
+  function uintBoolFunctionReturnsUintBool (uint _uint, bool __bool) public constant returns(uint __uint, bool _bool_){
     uint ___uint;
-    uint8 ___uint8;
-    return (___uint, ___uint8);
+    bool ___bool;
+    return (___uint, ___bool);
   }
   function uint8FunctionReturnsBool (uint8 _uint8) public constant returns(bool __bool){
     bool ___bool;
@@ -429,10 +429,10 @@ contract SampleContract {
     return __string;
   }
   event Uint8EventReturnsString(string __string);
-  function uint8AddressFunctionReturnsUint8Address (uint8 _uint8) public constant returns(uint8 __uint8, address _address_){
+  function uint8StringFunctionReturnsUint8String (uint8 _uint8, string __string) public constant returns(uint8 __uint8, string _string_){
     uint8 ___uint8;
-    address ___address;
-    return (___uint8, ___address);
+    string ___string;
+    return (___uint8, ___string);
   }
   function uint256FunctionReturnsBool (uint256 _uint256) public constant returns(bool __bool){
     bool ___bool;
@@ -499,10 +499,10 @@ contract SampleContract {
     return __string;
   }
   event Uint256EventReturnsString(string __string);
-  function uint256Int256FunctionReturnsUint256Int256 (uint256 _uint256) public constant returns(uint256 __uint256, int256 _int256_){
+  function uint256StringFunctionReturnsUint256String (uint256 _uint256, string __string) public constant returns(uint256 __uint256, string _string_){
     uint256 ___uint256;
-    int256 ___int256;
-    return (___uint256, ___int256);
+    string ___string;
+    return (___uint256, ___string);
   }
   function addressFunctionReturnsBool (address _address) public constant returns(bool __bool){
     bool ___bool;
@@ -569,10 +569,10 @@ contract SampleContract {
     return __string;
   }
   event AddressEventReturnsString(string __string);
-  function addressUint8FunctionReturnsAddressUint8 (address _address) public constant returns(address __address, uint8 _uint8_){
+  function addressIntFunctionReturnsAddressInt (address _address, int __int) public constant returns(address __address, int _int_){
     address ___address;
-    uint8 ___uint8;
-    return (___address, ___uint8);
+    int ___int;
+    return (___address, ___int);
   }
   function byteFunctionReturnsBool (byte _byte) public constant returns(bool __bool){
     bool ___bool;
@@ -639,10 +639,10 @@ contract SampleContract {
     return __string;
   }
   event ByteEventReturnsString(string __string);
-  function byteBytesFunctionReturnsByteBytes (byte _byte) public constant returns(byte __byte, bytes _bytes_){
+  function byteBoolFunctionReturnsByteBool (byte _byte, bool __bool) public constant returns(byte __byte, bool _bool_){
     byte ___byte;
-    bytes ___bytes;
-    return (___byte, ___bytes);
+    bool ___bool;
+    return (___byte, ___bool);
   }
   function bytes1FunctionReturnsBool (bytes1 _bytes1) public constant returns(bool __bool){
     bool ___bool;
@@ -709,10 +709,10 @@ contract SampleContract {
     return __string;
   }
   event Bytes1EventReturnsString(string __string);
-  function bytes1Int256FunctionReturnsBytes1Int256 (bytes1 _bytes1) public constant returns(bytes1 __bytes1, int256 _int256_){
+  function bytes1BytesFunctionReturnsBytes1Bytes (bytes1 _bytes1, bytes __bytes) public constant returns(bytes1 __bytes1, bytes _bytes_){
     bytes1 ___bytes1;
-    int256 ___int256;
-    return (___bytes1, ___int256);
+    bytes ___bytes;
+    return (___bytes1, ___bytes);
   }
   function bytes32FunctionReturnsBool (bytes32 _bytes32) public constant returns(bool __bool){
     bool ___bool;
@@ -779,10 +779,10 @@ contract SampleContract {
     return __string;
   }
   event Bytes32EventReturnsString(string __string);
-  function bytes32Uint8FunctionReturnsBytes32Uint8 (bytes32 _bytes32) public constant returns(bytes32 __bytes32, uint8 _uint8_){
+  function bytes32AddressFunctionReturnsBytes32Address (bytes32 _bytes32, address __address) public constant returns(bytes32 __bytes32, address _address_){
     bytes32 ___bytes32;
-    uint8 ___uint8;
-    return (___bytes32, ___uint8);
+    address ___address;
+    return (___bytes32, ___address);
   }
   function bytesFunctionReturnsBool (bytes _bytes) public constant returns(bool __bool){
     bool ___bool;
@@ -849,10 +849,10 @@ contract SampleContract {
     return __string;
   }
   event BytesEventReturnsString(string __string);
-  function bytesStringFunctionReturnsBytesString (bytes _bytes) public constant returns(bytes __bytes, string _string_){
+  function bytesUintFunctionReturnsBytesUint (bytes _bytes, uint __uint) public constant returns(bytes __bytes, uint _uint_){
     bytes ___bytes;
-    string ___string;
-    return (___bytes, ___string);
+    uint ___uint;
+    return (___bytes, ___uint);
   }
   function stringFunctionReturnsBool (string _string) public constant returns(bool __bool){
     bool ___bool;
@@ -919,10 +919,10 @@ contract SampleContract {
     return __string;
   }
   event StringEventReturnsString(string __string);
-  function stringUint8FunctionReturnsStringUint8 (string _string) public constant returns(string __string, uint8 _uint8_){
+  function stringInt8FunctionReturnsStringInt8 (string _string, int8 __int8) public constant returns(string __string, int8 _int8_){
     string ___string;
-    uint8 ___uint8;
-    return (___string, ___uint8);
+    int8 ___int8;
+    return (___string, ___int8);
   }
   function changeBool(bool __bool) public {
     _bool = __bool;

@@ -10,27 +10,13 @@ const child_process = require('child_process');
 
 commander
     .version('0.0.1')
-    .usage('wrap [options]')
-    .option('-a, --address [address]', 'Address')
-    .option('-b, --abi [abi]', 'ABI')
-    .option('-c, --contract [contract]', 'Contract')
+    .usage('build [options]')
+    .option('-c, --contract [contract]', 'Contract name or location \n                             ie: SampleContract or SampleContract.sol or ./contracts/SampleContract.sol')
+    .option('-b, --abi [abi]', 'ABI name or location \n                             ie: SampleContract or SampleContract.json or ./build/contracts/SampleContract.json')
+    .option('-a, --address [address]', 'Address of deployed contract')
 
 
-commander
-    .command('build')
-    .description('Build a dummy solidity contract for testing')
-    .action((command) => {
-        let skip = true
-        dappScratch = new DappScratch({skip})
-        dappScratch.createDummyContract()
-        .then(() => {
-          console.log('Contract Created 🎉'.green)
-        })
-        .catch((error) => {
-          console.log('FAILED'.red)
-          console.error(error)
-        })
-    })
+
 
 function getContract (path) {
     if (!fs.existsSync(path)) {
@@ -111,8 +97,8 @@ function promptInstall (index = 0, dependencies = []) {
     })
 }
 commander
-    .command('wrap filename')
-    .description('Build Wrapper from Contract')
+    .command('build filename')
+    .description('Build a module from Contract or ABI')
     .action((filename, comm) => {
         if (!comm) {
             comm = filename
@@ -132,7 +118,7 @@ commander
             return dappScratch.createWrapper(commander.address)
         })
         .then(() => {
-          console.log(colors.green('Wrapper Created at ' + dappScratch.path))
+          console.log(colors.green('Module created at ' + dappScratch.path))
           console.log(colors.grey(`
 /*
  * To use ${dappScratch.projectName} just import it into your project:
@@ -161,6 +147,22 @@ if (process.argv <= 2) {
     commander.help()
     process.exit(1);
 }
+
+commander
+    .command('test')
+    .description('Generate a contract for testing\n\n')
+    .action((command) => {
+        let skip = true
+        dappScratch = new DappScratch({skip})
+        dappScratch.createDummyContract()
+        .then(() => {
+          console.log('Contract Created 🎉'.green)
+        })
+        .catch((error) => {
+          console.log('FAILED'.red)
+          console.error(error)
+        })
+    })
 
 commander.parse(process.argv)
 
