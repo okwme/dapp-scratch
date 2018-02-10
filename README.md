@@ -6,7 +6,7 @@ A command line interface for generating a Javascript module for interacting with
 
 ## install
 ```
-npm install okwme/dapp-scratch -g
+npm install -g dapp-scratch
 ```
 ## run
 ```
