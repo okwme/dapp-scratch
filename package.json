@@ -15,5 +15,9 @@
     "shelljs": "^0.7.8"
   },
   "devDependencies": {},
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/okwme/dapp-scratch.git"
+  },
   "scripts": {}
 }
