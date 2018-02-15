@@ -121,12 +121,12 @@ commander
           console.log(colors.green('Module created at ' + dappScratch.path))
           console.log(colors.grey(`
 /*
- * To use ${dappScratch.projectName} just import it into your project:
+ * To use ${dappScratch.contractPath} just import it into your project:
  */
 
-const ${dappScratch.projectName} = require('${dappScratch.path}')
-let ${dappScratch.projectNameSmall} = new ${dappScratch.projectName}()
-${dappScratch.projectNameSmall}.helloWorld()
+const ${dappScratch.contractPath} = require('${dappScratch.path}')
+let ${dappScratch.contractPath_} = new ${dappScratch.contractPath}()
+${dappScratch.contractPath_}.helloWorld()
 
 /*
  * Have Fun : )
