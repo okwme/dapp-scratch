@@ -100,6 +100,7 @@ commander
     .command('build filename')
     .description('Build a module from Contract or ABI')
     .action((filename, comm) => {
+        try {
         if (!comm) {
             comm = filename
             filename = null
@@ -138,6 +139,9 @@ ${dappScratch.contractPath_}.helloWorld()
             console.error(colors.red(error))
             commander.help()
         })
+    } catch (error) {
+        console.log(error)
+    }
     })
 // process.on('unhandledRejection', (reason) => {
 //     console.log('Reason: ' + reason);
