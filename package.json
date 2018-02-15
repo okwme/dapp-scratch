@@ -1,6 +1,6 @@
 {
   "name": "dapp-scratch",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "./lib/dapp-scratch.js",
   "bin": {
     "dapp-scratch": "bin/dapp-scratch.js"
